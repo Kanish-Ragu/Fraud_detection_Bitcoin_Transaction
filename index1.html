@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Bitcoin Ransomewere Detection</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{background-image: url('static/bot.jpg');background-repeat: no-repeat;background-size: cover;
+            background-size: cover;}
+        .main{padding-bottom: 50px;position: relative;}
+        .tit{text-align: center;width: 100%;padding: 50px;}
+        form{background-color: rgb(112 199 190);margin: 10px 100px;padding: 70px;
+            border-radius: 20px;}
+        input{outline: none;width: 100%;margin: 10px 0;border-radius: 5px;border: 1px solid;height: 35px;
+            padding-left: 10px;}
+        .b{text-align: center;padding-top: 20px;}
+        h3{background-color: #c4ecff;padding: 13px;border-radius: 8px;}
+        button{border: none;border-radius: 5px;background-color: #07524b;width: 90px;height: 30px;
+            color: #fff;}
+        h4{width: 100%;text-align: center;padding: 37px 150px 44px;background-color: rgb(112 199 190);
+            border-radius: 5px;}
+        .box_card{position: absolute;top: 23%;left: 35%;display: none;}
+        .row1{width: 48%;display: inline-block;margin-right: 1%;}
+    </style>
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="tit">
+                <h3>Bitcoin Ransomewere Detection</h3>
+            </div>
+            <div class="box_card" {{view}}>
+                <h4>{{value}}</h4>
+            </div>
+            <form action="/predict" method="post" {{view1}}>
+                <div class="row1">
+                    <label> The year in which the transaction was made.</label>
+                    <div class="in">
+                        <input type="text" name="lines" step="any" required>
+                    </div>
+                </div>
+                <div class="row1">
+                    <label>The day of the year (1-365) on which the transaction was made</label>
+                    <div class="in">
+                        <input type="text" name="cc" step="any" required>
+                    </div>
+                </div>
+                <div class="row1">
+                    <label>The length of the transaction in bytes.</label>
+                    <div class="in">
+                        <input type="text" name="ec" step="any" required>
+                    </div>
+                </div>
+                <div class="row1">
+                    <label>The weight of the transaction, as defined by the Bitcoin protocol.</label>
+                    <div class="in">
+                        <input type="text" name="dc" step="any" required>
+                    </div>
+                </div>
+                <div class="row1">
+                    <label>The number of transactions associated with the address.</label>
+                    <div class="in">
+                        <input type="text" name="methods" step="any" required>
+                    </div>
+                </div>
+                <div class="row1">
+                    <label>A binary indicator (0 or 1) of whether the transaction is associated with a previously seen transaction (looping).</label>
+                    <div class="in">
+                        <input type="text" name="hcm" step="any" required>
+                    </div>
+                </div>
+                <div class="row1">
+                    <label>The number of distinct addresses that have transacted with the given address.</label>
+                    <div class="in">
+                        <input type="text" name="tline" step="any" required>
+                    </div>
+                </div>
+                <div class="row1">
+                    <label>The total income (in Bitcoin) received by the address prior to the transaction</label>
+                    <div class="in">
+                        <input type="text" name="dp" step="any" required>
+                    </div>
+                </div>
+                
+
+                <div class="b">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
